@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+      body {
+        font-family: 'Takao Pゴシック','Open Sans',Helvetica,Arial,sans-serif;
+        padding: 10px;
+	color: #555;
+     }
+     </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <ul>
+      <li><script>document.write(process.version)</script>
+      <li><script>document.write(process.versions['electron'])</script>
+    </ul>
+    <h2>hello,worldサンプルプログラム</h2>
+    <p>
+    Linux Mint環境では、日本語表示のために以下の手順を実施しておく。
+    <ul>
+	    <li>headタグ中に&lt;meta charset="UTF-8"&gt;を記述しておく
+	    <li>styleタグ中でbodyのスタイルシートとして「font-family: 'Takao Pゴシック',...」を記述しておく
+    </ul>
+    </p>
+    <form>
+      <input type="button" value="Toggle Developer Tools" onclick="toggle_devtool()">
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
+
