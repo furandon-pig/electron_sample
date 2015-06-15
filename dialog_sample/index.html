@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>dialog.showMessageBox()のサンプルプログラム</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <style>
+      body {
+        margin-left: 40px; 
+        font-family: 'Takao Pゴシック','Open Sans',Helvetica,Arial,sans-serif;
+        color: #555;
+      }
+      .my-style {
+        margin-bottom: 20px;
+      }
+     </style>
+  </head>
+  <body>
+    <div class="row">
+      <h2>dialog.<a href="http://electron.atom.io/docs/v0.27.0/api/dialog/#dialog.showmessagebox([browserwindow],-options,-[callback])">showMessageBox()</a></h2>
+    </div>
+    <div class="row my-style">
+      <div>
+        <label>
+          type String - Can be "none", "info" or "warning"
+        </label>
+      </div>
+      <div class="radio-inline">
+        <label class="radio-inline">
+          <input type="radio" id="type_none" name="type" value="none">none
+         </label>
+      </div>
+      <div class="radio-inline">
+        <label class="radio-inline">
+          <input type="radio" id="type_info" name="type" value="info" checked>info
+        </label>
+      </div>
+      <div class="radio-inline">
+        <label class="radio-inline">
+          <input type="radio" id="type_warning" name="type" value="warning">warning
+        </label>
+      </div>
+      </div>
+    </div>
+    <!-- title String - Title of the message box, some platforms will not show it -->
+    <div class="row my-style">
+      <div>
+        <label>
+          title String - Title of the message box, some platforms will not show it
+        </label>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">title</span>
+        <input type="text" id="dlg_title" class="form-control" placeholder="ダイアログボックスのタイトル" value="アロマゲドン" style="width:330px;">
+      </div>
+    </div>
+    <!-- message String - Content of the message box -->
+    <div class="row my-style">
+      <div>
+        <label>
+          message String - Content of the message box
+        </label>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">message</span>
+        <input type="text" id="dlg_message" class="form-control" placeholder="メッセージ" value="Electronの門をくぐるもの、すべての希望を捨てよ！" style="width:300px;">
+      </div>
+    </div>
+    <!-- icon NativeImage -->
+    <div class="row my-style">
+      <div>
+        <label>
+          icon <a href="http://electron.atom.io/docs/v0.27.0/api/native-image">NativeImage</a>
+        </label>
+      </div>
+      <div class="radio-inline">
+        <label class="radio-inline">
+          <input type="radio" id="icon_none" name="icon" value="none" checked>なし
+        </label>
+        <label class="radio-inline">
+          <input type="radio" id="icon_mikan" name="icon" value="mikan">みかん
+        </label>
+        <label class="radio-inline">
+          <input type="radio" id="icon_aroma" name="icon" value="aroma">あろま
+        </label>
+      </div>
+    </div>
+    <!-- buttons Array - Array of texts for buttons -->
+    <div class="row my-style">
+      <div>
+        <label>
+          buttons Array - Array of texts for buttons
+        </label>
+      </div>
+      <div class="form-inline">
+        <label class="radio-inline">
+          <input type="checkbox" id="btn_default" checked disabled>かしこまっ！
+        </label>
+        <label class="radio-inline">
+          <input type="checkbox" id="btn_mikan" value="mikan">みかん
+        </label>
+        <label class="radio-inline">
+          <input type="checkbox" id="btn_aroma" value="aroma">あろま
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-primary" onclick="show_dialog()">
+        ダイアログボックスを表示
+      </button>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
