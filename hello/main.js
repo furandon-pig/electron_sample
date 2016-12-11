@@ -1,7 +1,8 @@
-var app = require('app');
-var BrowserWindow = require('browser-window');
+"use strict";
 
-require('crash-reporter').start();
+const electron = require("electron");
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 
 var mainWindow = null;
 
@@ -13,7 +14,7 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
 	mainWindow = new BrowserWindow({width: 640, height: 480});
-	mainWindow.loadUrl('file://' + __dirname + '/index.html');
+	mainWindow.loadURL('file://' + __dirname + '/index.html');
 	//mainWindow.openDevTools();
 	mainWindow.on('closed', function() {
 		mainWindow = null;
